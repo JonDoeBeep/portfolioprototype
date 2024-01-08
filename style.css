@@ -44,8 +44,8 @@ canvas {
   position: fixed;
   left: 45%;
   bottom: 90%;
-  width: 5%;
   max-width: 50%;
+  width: 5%;
 }
 
 .shownLater:hover {
