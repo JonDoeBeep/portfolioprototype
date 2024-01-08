@@ -21,7 +21,7 @@ canvas {
 .rightSide {
   text-align: center;
   width: 5%;
-  max-width: 10%;
+  max-width: 50%;
   position: fixed;
   right: 94%;
   bottom: 50%;
@@ -30,7 +30,7 @@ canvas {
 .leftSide {
   text-align: center;
   width: 5%;
-  max-width: 10%;
+  max-width: 50%;
   position: fixed;
   left: 94%;
   bottom: 50%;
@@ -41,7 +41,7 @@ canvas {
   position: fixed;
   left: 45%;
   bottom: 90%;
-  max-width: 10%;
+  max-width: 50%;
   width: 5%;
 }
 
@@ -53,7 +53,7 @@ canvas {
 .bottomSide {
   text-align: center;
   width: 5%;
-  max-width: 10%;
+  max-width: 50%;
   position: fixed;
   left: 44%;
   top: 90%;
