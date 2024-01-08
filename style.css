@@ -21,6 +21,7 @@ canvas {
 .rightSide {
   text-align: center;
   width: 5%;
+  max-width: 10%;
   position: fixed;
   right: 94%;
   bottom: 50%;
@@ -29,6 +30,7 @@ canvas {
 .leftSide {
   text-align: center;
   width: 5%;
+  max-width: 10%;
   position: fixed;
   left: 94%;
   bottom: 50%;
@@ -40,6 +42,7 @@ canvas {
   left: 45%;
   bottom: 90%;
   width: 5%;
+  max-width: 10%;
 }
 
 .shownLater:hover {
@@ -50,6 +53,7 @@ canvas {
 .bottomSide {
   text-align: center;
   width: 5%;
+  max-width: 10%;
   position: fixed;
   left: 44%;
   top: 90%;
