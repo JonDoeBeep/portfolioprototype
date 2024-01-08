@@ -27,6 +27,46 @@ $(document).ready(function () {
     });
   });
 });
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function addCss(fileName) {
+   var link = $("<link />",{
+     rel: "stylesheet",
+     type: "text/css",
+     href: fileName
+   })
+   $('head').append(link);
+}
+if (getCookie("hasVisted") == "") {
+  addCss("style.css");
+} else {
+  addCss("stylesides.css");
+}
+function setCookie(cname, cvalue, exhours) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exhours * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+$(window).bind('beforeunload', function(){
+  setCookie("hasVisted","1",3)
+});
+
+
 
 function waitMSec(x) {
   let a = new Date().getTime();
@@ -101,30 +141,35 @@ function update(t) {
   c.addEventListener("mouseenter", function () {
     isOnDiv = true;
   });
-  if (isOnDiv) {
-    if (j == "1010100") {
-      for (let i = 0; i < h1.length; i++) {
-        h1[i].style.visibility = "visible";
-      }
-      a1.style.visibility = "hidden";
-      if (o == "101010") {
-        // do nothing
+  if (getCookie("hasVisted") == '') {
+    if (isOnDiv) {
+      if (j == "1010100") {
+        for (let i = 0; i < h1.length; i++) {
+          h1[i].style.visibility = "visible";
+        }
+        a1.style.visibility = "hidden";
+        if (o == "101010") {
+          // do nothing
+        } else {
+          let num = parseInt(o, 16);
+          num -= 0x010101;
+          o = num.toString(16).padStart(6, "");
+          console.log(o);
+        }
       } else {
-        let num = parseInt(o, 16);
-        num -= 0x010101;
-        o = num.toString(16).padStart(6, "");
-        console.log(o);
-      }
-    } else {
-      let num = parseInt(j, 16);
-      num += 0x010101;
-      if ((num += 0x010101).toString(16).padStart(6, "") == "ffffff") {
+        let num = parseInt(j, 16);
         num += 0x010101;
-        waitMSec(2000);
+        if ((num += 0x010101).toString(16).padStart(6, "") == "ffffff") {
+          num += 0x010101;
+          waitMSec(2000);
+        }
+        j = num.toString(16).padStart(6, "");
+        console.log(j);
       }
-      j = num.toString(16).padStart(6, "");
-      console.log(j);
     }
+  } else {
+    j = "ffffff";
+    o = "101010";
   }
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   trail.forEach((p, pIdx) => {
