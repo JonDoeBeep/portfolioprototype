@@ -5,7 +5,7 @@ html {
   margin: 0;
   overscroll-behavior: none;
   overflow: hidden;
-  font-size: 3.2vw;
+  font-size: 9px;
 }
 
 canvas {
