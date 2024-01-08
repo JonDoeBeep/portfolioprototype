@@ -5,7 +5,6 @@ html {
   margin: 0;
   overscroll-behavior: none;
   overflow: hidden;
-  font-size: 9px;
 }
 
 canvas {
@@ -20,6 +19,7 @@ canvas {
 }
 
 .rightSide {
+  font-size: 9px;
   text-align: center;
   width: 5%;
   max-width: 50%;
@@ -29,6 +29,7 @@ canvas {
 }
 
 .leftSide {
+  font-size: 9px;
   text-align: center;
   width: 5%;
   max-width: 50%;
@@ -38,6 +39,7 @@ canvas {
 }
 
 .topSide {
+  font-size: 9px;
   text-align: center;
   position: fixed;
   left: 45%;
@@ -52,6 +54,7 @@ canvas {
 }
 
 .bottomSide {
+  font-size: 9px;
   text-align: center;
   width: 5%;
   max-width: 50%;
