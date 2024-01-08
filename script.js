@@ -168,6 +168,10 @@ function update(t) {
       }
     }
   } else {
+    for (let i = 0; i < h1.length; i++) {
+      h1[i].style.visibility = "visible";
+    }
+    a1.style.visibility = "hidden";
     j = "ffffff";
     o = "101010";
   }
