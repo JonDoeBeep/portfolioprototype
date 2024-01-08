@@ -1,0 +1,80 @@
+body,
+html {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+
+canvas {
+  z-index: 0;
+}
+
+.shownLater {
+  border-radius: 5px;
+  transition: all 4s linear;
+  visibility: shown;
+  color: #101010;
+}
+
+.rightSide {
+  text-align: center;
+  width: 5%;
+  position: fixed;
+  right: 94%;
+  bottom: 50%;
+}
+
+.leftSide {
+  text-align: center;
+  width: 5%;
+  position: fixed;
+  left: 94%;
+  bottom: 50%;
+}
+
+.topSide {
+  text-align: center;
+  position: fixed;
+  left: 45%;
+  bottom: 90%;
+  width: 5%;
+}
+
+.shownLater:hover {
+  color: white !important;
+  background-color: black;
+}
+
+.bottomSide {
+  text-align: center;
+  width: 5%;
+  position: fixed;
+  left: 44%;
+  top: 90%;
+}
+
+.noHover:hover {
+  color: black !important;
+  background-color: inherit;
+}
+
+.main {
+  position: fixed;
+  bottom: 50%;
+  right: 50%;
+  font-size: 18px;
+  font-family: sans-serif;
+  background-color: inherit;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#a1 {
+  color: white;
+}
