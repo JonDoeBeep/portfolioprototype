@@ -1,7 +1,14 @@
 import $ from "https://esm.sh/jquery";
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
+let isOnDiv = false;
+let j = "ffffff";
+let o = "101010";
+let l = 0;
+var divM = document.getElementById("main");
+let h1 = document.querySelectorAll(".shownLater");
 
+let a1 = document.getElementById("a1");
 let mouseMoved = true;
 
 var speed = "slow";
@@ -21,6 +28,13 @@ $(document).ready(function () {
   });
 });
 
+function waitMSec(x) {
+  let a = new Date().getTime();
+  let b = start;
+  while (a < b + x) {
+    b = new Date().getTime(); // this sucks but it will pause my code
+  }
+}
 
 const pointer = {
   x: 0.5 * window.innerWidth,
@@ -77,13 +91,8 @@ function update(t) {
   }
 
   ctx.strokeStyle = "white";
-  ctx.fillStyle = `white`;
-  ctx.strokeStyle = `black`;
-  for (let i = 0; i < h1.length; i++) {
-    h1[i].style.color = `#${o}`;
-  }
-
- 
+  ctx.fillStyle = `#FFFFFF`;
+  ctx.strokeStyle = `#101010`;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   trail.forEach((p, pIdx) => {
     const prev = pIdx === 0 ? pointer : trail[pIdx - 1];
