@@ -19,32 +19,26 @@ canvas {
 }
 
 .rightSide {
-  font-size: 9px;
   text-align: center;
   width: 5%;
-  max-width: 50%;
   position: fixed;
   right: 94%;
   bottom: 50%;
 }
 
 .leftSide {
-  font-size: 9px;
   text-align: center;
   width: 5%;
-  max-width: 50%;
   position: fixed;
   left: 94%;
   bottom: 50%;
 }
 
 .topSide {
-  font-size: 9px;
   text-align: center;
   position: fixed;
   left: 45%;
   bottom: 90%;
-  max-width: 50%;
   width: 5%;
 }
 
@@ -54,10 +48,8 @@ canvas {
 }
 
 .bottomSide {
-  font-size: 9px;
   text-align: center;
   width: 5%;
-  max-width: 50%;
   position: fixed;
   left: 44%;
   top: 90%;
